@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<main class="mdl-layout__content">
+	<div class="mdl-grid">
+		<div class="mdl-cell">
+			<article>
+				<header>
+					<h1 class="mdl-typography--display-1">{{ .Title | title }}</h1>
+				</header>
+				<section id="content">
+					{{ .Content }}
+				</section>
+				<footer>
+					<time>{{ .Date }}</time>
+				</footer>
+			</article>
+		</div>
+	</div>
+</main>
+{{ partial "footer.html" . }}

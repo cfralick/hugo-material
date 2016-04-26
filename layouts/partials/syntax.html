@@ -1,0 +1,7 @@
+  {{ with .Site.Params.highlightjs }}
+  {{ $cdnjs := "//cdnjs.cloudflare.com/ajax/libs/" }}
+  <link rel="stylesheet" href="{{ $cdnjs }}highlight.js/9.1.0/styles/{{ . }}.min.css">
+  <script src="{{ $cdnjs }}highlight.js/9.1.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  {{ end }}
+  

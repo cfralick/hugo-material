@@ -1,0 +1,12 @@
+{{ with .Site.DisqusShortname }}
+<script type="text/javascript">
+  (function(shortname) {
+    if(window.location.hostname != "localhost") {
+      $('.blog').one('mouseenter', function() {
+        $.ajaxSetup({cache: true});
+        $.getScript('//'+shortname+'.disqus.com/embed.js');
+      });
+    }
+  })('{{ . }}');
+</script>
+{{ end }}

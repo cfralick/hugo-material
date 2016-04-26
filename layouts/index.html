@@ -1,0 +1,5 @@
+{{ partial "header.html" . }}
+<main class="mdl-layout__content">
+  <h1 class="mdl-typography--display-4">{{ if .Title }}{{ .Title | title }}{{else}}{{ .Site.Title }}{{ end }}</h1>
+</main>
+{{ partial "footer.html" . }}

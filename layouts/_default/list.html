@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<main class="mdl-layout__content">
+  <h1 class="mdl-typography--display-1">{{ if .Title }}{{ .Title | title }}{{else}}{{ .Site.Title }}{{ end }}</h1>
+  <ul class="mdl-list">
+    {{ range .Data.Pages }}
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-text">{{ .Title }}</span>
+    </li>
+    {{ end }}
+  </ul>
+</main>
+{{ partial "footer.html" . }}

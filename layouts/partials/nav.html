@@ -1,0 +1,9 @@
+<nav class="mdl-navigation">
+  {{ $node := . }}
+  {{ range .Site.Menus.nav }}
+  <a 
+  class="mdl-navigation__link {{if or ($node.IsMenuCurrent "nav" .) ($node.HasMenuCurrent "nav" .) }}active{{end}}" 
+  href="{{.URL}}">{{ .Name }}
+  </a>
+  {{end}}
+</nav>
