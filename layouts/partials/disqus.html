@@ -1,12 +1,12 @@
 {{ with .Site.DisqusShortname }}
 <script type="text/javascript">
-  (function(shortname) {
-    if(window.location.hostname != "localhost") {
-      $('.blog').one('mouseenter', function() {
-        $.ajaxSetup({cache: true});
-        $.getScript('//'+shortname+'.disqus.com/embed.js');
-      });
+  (function(w, d, shortname) {
+    if(w.location.hostname != "localhost") {
+      var s = d.createElement('script');
+      s.src = '//'+shortname+'.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
     }
-  })('{{ . }}');
+  })(window, document, '{{ . }}');
 </script>
 {{ end }}
