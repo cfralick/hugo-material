@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <main class="mdl-layout__content">
   <h1 class="mdl-typography--display-4">{{ if .Title }}{{ .Title | title }}{{else}}{{ .Site.Title }}{{ end }}</h1>
-  <h3>{{ .Site.description }}</h3>
+  <h3>{{ .Site.Params.description }}</h3>
 </main>
 {{ partial "footer.html" . }}
