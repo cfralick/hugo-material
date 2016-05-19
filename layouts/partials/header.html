@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    
+    {{ .Hugo.Generator }}
+
     <base href="{{ .Site.BaseURL }}"/>
     
     <title>{{ if .Title }}{{ .Title | title }}{{ else }}{{ .Site.Title | title }}{{ end }}</title>
